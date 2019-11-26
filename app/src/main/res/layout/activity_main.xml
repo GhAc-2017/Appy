@@ -36,9 +36,17 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Switch games"
+        android:text="Google Map"
+        android:layout_above="@id/switcher"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/gmap"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mapbox"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
         android:id="@+id/switcher"/>
 
 </RelativeLayout>

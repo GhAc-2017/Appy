@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
+import com.ayan.appy.maps.Gmap
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -25,9 +26,13 @@ class MainActivity : AppCompatActivity() {
             val message:String = textval.text.toString()
             Toast.makeText(applicationContext, message, Toast.LENGTH_LONG).show()
 
-            val intent = Intent(this, secondary::class.java)
-            intent.putExtra("key", "Ayan "+message)
+            val intent = Intent(this, MapActivity::class.java)
+            //intent.putExtra("key", "Ayan "+message)
             startActivity(intent)
+        }
+
+        gmap.setOnClickListener {
+            startActivity(Intent(this, Gmap::class.java))
         }
     }
 }
